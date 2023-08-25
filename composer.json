@@ -1,0 +1,32 @@
+{
+    "name": "vermontdevelopment/cdb-sync",
+    "description": "Package to synchronize project data from CDB to all projects",
+    "authors": [
+        {
+            "name": "Bruno Dilhof",
+            "email": "bruno.dilhof@vermont.eu"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VermontDevelopment\\CdbSync\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VermontDevelopment\\CdbSync\\CdbServiceProvider"
+            ],
+            "aliases": {
+                "CdbSync": "VermontDevelopment\\CdbSync\\Facades\\CdbFacade"
+            }
+        }
+    }
+}
